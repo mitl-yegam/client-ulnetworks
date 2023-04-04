@@ -1,0 +1,78 @@
+@use "sass:map";
+@use "./spacing";
+
+// flex-direction
+$flex-direction-map: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse,
+);
+
+// flex-grow
+$flex-grow-map: (
+  grow-0: 0,
+  grow-1: 1,
+);
+
+// flex-shrink
+$flex-shrink-map: (
+  shrink-0: 0,
+  shrink-1: 1,
+);
+
+// flex-wrap
+$flex-wrap-map: (
+  wrap: wrap,
+  wrap-reverse: wrap-reverse,
+  nowrap: nowrap,
+);
+
+// justify-content
+$justify-content-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly  
+);
+
+// justify-items 
+$justify-items-map: (
+  start: start,
+  end: end,
+  center: center,
+  stretch: stretch,
+);
+
+// justify-self
+$justify-self-map: (
+  auto: auto,
+  start: start,
+  end: end,
+  center: center,
+  stretch: stretch,
+);
+
+// align-items
+$align-items-map: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch
+);
+
+// align-content
+$align-content-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch
+);
+
+$max-gap: 28;

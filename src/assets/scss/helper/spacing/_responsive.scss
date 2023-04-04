@@ -1,0 +1,67 @@
+@use '../../abstracts/variables/spacing';
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/breakpoints' as breakpointsMixin;
+
+@for $i from 0 through spacing.$spacing {
+  @each $name, $value  in breakpoints.$breakpoints {
+    @include breakpointsMixin.media-breakpoint-up($name) {
+      .m-#{$name}-#{$i} {
+          margin: spacing.$base-size * $i !important;
+      }
+      .mt-#{$name}-#{$i} {
+        margin-top: spacing.$base-size * $i !important;
+      }
+      .mb-#{$name}-#{$i} {
+      margin-bottom: spacing.$base-size * $i !important;
+      }
+
+      .ml-#{$name}-#{$i} {
+      margin-left: spacing.$base-size * $i !important;
+      }
+
+      .mr-#{$name}-#{$i} {
+      margin-right: spacing.$base-size * $i !important;
+      }
+
+      .mx-#{$name}-#{$i} {
+      margin-left: spacing.$base-size * $i !important;
+      margin-right: spacing.$base-size * $i !important;
+      }
+
+      .my-#{$name}-#{$i} {
+      margin-top: spacing.$base-size * $i !important;
+      margin-bottom: spacing.$base-size * $i !important;
+      }
+
+      .p-#{$name}-#{$i} {
+        padding: spacing.$base-size * $i !important;
+      }
+
+      .pt-#{$name}-#{$i} {
+        padding-top: spacing.$base-size * $i !important;
+      }
+
+      .pb-#{$name}-#{$i} {
+        padding-bottom: spacing.$base-size * $i !important;
+      }
+
+      .pl-#{$name}-#{$i} {
+        padding-left: spacing.$base-size * $i !important;
+      }
+
+      .pr-#{$name}-#{$i} {
+        padding-right: spacing.$base-size * $i !important;
+      }
+
+      .px-#{$name}-#{$i} {
+        padding-left: spacing.$base-size * $i !important;
+        padding-right: spacing.$base-size * $i !important;
+      }
+
+      .py-#{$name}-#{$i} {
+        padding-top: spacing.$base-size * $i !important;
+        padding-bottom: spacing.$base-size * $i !important;
+      }
+    }
+  }
+}

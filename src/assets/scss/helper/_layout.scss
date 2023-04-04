@@ -1,0 +1,54 @@
+@use '../abstracts/mixins/layout' as LayoutMixin;
+@use '../abstracts/mixins/breakpoints' as breakpointsMixin;
+@use '../abstracts/variables/breakpoints' as *;
+@use '../abstracts/variables/layout';
+
+.container {
+  @include LayoutMixin.make-container(xss);
+
+  @each $value in map-keys($breakpoints) {
+    @include breakpointsMixin.media-breakpoint-up($value) {
+      @include LayoutMixin.make-container($value);
+    }
+  }
+
+  &-fluid {
+    width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-right: calc(-1 * var(--gutter-x));
+    margin-left: calc(-1 * var(--gutter-x));
+
+    & > * {
+      padding: var(--gutter-y) var(--gutter-x) !important;
+    }
+
+    /* row-cols, col, gutters */
+    @include LayoutMixin.make-col(col);
+    @include LayoutMixin.make-gutter();
+    @include LayoutMixin.make-gutter(x);
+    @include LayoutMixin.make-gutter(y);
+
+    @each $value in map-keys($breakpoints) {
+      @include breakpointsMixin.media-breakpoint-up($value) {
+        @include LayoutMixin.make-col(col-#{$value});
+      }
+    }
+
+    .col {
+      width: 100%;
+
+      @each $value in map-keys($breakpoints) {
+        &-#{$value}-auto {
+          flex: 0 0 auto !important;
+          width: auto !important;
+        }
+      }
+    }
+  }
+}

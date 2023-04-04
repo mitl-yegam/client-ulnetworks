@@ -1,0 +1,43 @@
+@use "../../assets/scss/abstracts/mixins/breakpoints";
+
+.service-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        height: 293px;
+    }
+
+    &.service-1 {
+        background-image: url('../../assets/images/etc/service-1.png');
+    }
+    
+    &.service-2 {
+        background-image: url('../../assets/images/etc/service-2.png');
+    }
+    
+    &.service-3 {
+        background-image: url('../../assets/images/etc/service-3.png');
+    }
+    
+    &.service-4 {
+        background-image: url('../../assets/images/etc/service-4.png');
+    }
+    
+    &.service-5 {
+        background-image: url('../../assets/images/etc/service-5.png');
+    }
+    
+    &.service-6 {
+        background-image: url('../../assets/images/etc/service-6.png');
+    }
+    
+    &.service-7 {
+        background-image: url('../../assets/images/etc/service-7.png');
+    }
+}

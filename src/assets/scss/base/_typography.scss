@@ -1,0 +1,116 @@
+@use '../abstracts/mixins/typography';
+@use '../abstracts/mixins/breakpoints';
+
+h1, .heading1 {
+  @include typography.make-typography(700, 26px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 40px);
+  }
+}
+h2,
+.heading2 {
+  @include typography.make-typography(700, 24px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 36px);
+  }
+}
+h3,
+.heading3 {
+  @include typography.make-typography(700, 22px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 28px);
+  }
+}
+h4,
+.heading4 {
+  @include typography.make-typography(700, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 24px);
+  }
+}
+
+h5,
+.heading5 {
+  @include typography.make-typography(700, 18px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 20px);
+  }
+}
+
+h6,
+.heading6 {
+  @include typography.make-typography(700, 18px);
+}
+
+
+
+.bold1 {
+  @include typography.make-typography(500, 22px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 40px);
+  }
+}
+.bold2 {
+  @include typography.make-typography(500, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 36px);
+  }
+}
+.bold3 {
+  @include typography.make-typography(500, 18px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 28px);
+  }
+}
+.bold4 {
+  @include typography.make-typography(500, 16px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 24px);
+  }
+}
+.bold5 {
+  @include typography.make-typography(500, 15px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 18px);
+  }
+}
+
+
+.normal1 {
+  @include typography.make-typography(400, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 36px);
+  }
+}
+.normal2 {
+  @include typography.make-typography(400, 18px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 28px);
+  }
+}
+.normal3 {
+  @include typography.make-typography(400, 16px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 24px);
+  }
+}
+p, .normal4 {
+  @include typography.make-typography(400, 15px);
+  
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 16px);
+  }
+}

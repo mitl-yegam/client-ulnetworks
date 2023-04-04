@@ -1,0 +1,107 @@
+@use "../abstracts/variables/flex" as *;
+@use "../abstracts/variables/spacing";
+@use "../abstracts/variables/breakpoints" as *;
+@use "../abstracts/mixins/breakpoints" as breakpointsMixin;
+
+.flex {
+  @each $name, $value in $flex-direction-map {
+    &-#{$name} {
+      flex-direction: $value !important;
+    }
+  }
+  @each $name, $value in $flex-grow-map {
+    &-#{$name} {
+      flex-grow: $value !important;
+    }
+  }
+  @each $name, $value in $flex-shrink-map {
+    &-#{$name} {
+      flex-shrink: $value !important;
+    }
+  }
+  @each $name, $value in $flex-wrap-map {
+    &-#{$name} {
+      flex-wrap: $value !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include breakpointsMixin.media-breakpoint-up($breakpoint) {
+      @each $name,
+        $value in $flex-direction-map {
+          &-#{$breakpoint}-#{$name} {
+            flex-direction: $value !important;
+          }
+        }
+      
+        @each $name,
+        $value in $flex-grow-map {
+          &-#{$breakpoint}-#{$name} {
+            flex-grow: $value !important;
+          }
+        }
+      
+        @each $name,
+        $value in $flex-shrink-map {
+          &-#{$breakpoint}-#{$name} {
+            flex-shrink: $value !important;
+          }
+        }
+      
+        @each $name,
+        $value in $flex-wrap-map {
+          &-#{$breakpoint}-#{$name} {
+            flex-wrap: $value !important;
+          }
+        }      
+    }
+  }
+}
+
+.justify {
+  @each $name,
+    $value in $justify-content-map {
+      &-#{$name} {
+        justify-content: $value !important;
+      }
+    }
+  
+    @each $name,
+    $value in $justify-items-map {
+      &-#{$name} {
+        justify-items: $value !important;
+      }
+    }
+  
+    @each $name,
+    $value in $justify-self-map {
+      &-#{$name} {
+        justify-self: $value !important;
+      }
+    }
+}
+
+.align {
+  @each $name, $value in $align-items-map {
+    &-items-#{$name} {
+      align-items: $value !important;
+    }
+    &-self-#{$name} {
+      align-self: $value !important;
+    }
+  }
+
+  @each $name,$value in $align-content-map {
+    &-content-#{$name} {
+      align-content: $value !important;
+    }
+  }
+}
+
+.gap {
+  @for $i from 0 through $max-gap {
+    &-#{$i} {
+      gap: spacing.$base-size * $i;
+    }
+  }
+}

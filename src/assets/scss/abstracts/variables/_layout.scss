@@ -1,0 +1,30 @@
+$container-widths: (
+  xxs: 248px,
+  xs: 100%,
+  sm: 100%,
+  md: 100%,
+  lg: 1280px,
+  xl: 1280px,
+  xxl: 1280px,
+);
+$container-paddings: (
+  xxs: 0,
+  xs: 16px,
+  sm: 16px,
+  md: 16px,
+  lg: 0,
+  xl: 0,
+  xxl: 0
+);
+$grid-columns: 12;
+$max-gutters: 5;
+$gutter-width: (
+  xxs: 0,
+  xs: 0,
+  sm: 0,
+  md: 16px,
+  lg: 32px,
+  xl: 32px,
+  xxl: 32px
+);
+

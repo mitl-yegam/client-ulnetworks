@@ -1,0 +1,163 @@
+@use '../../assets/scss/abstracts/variables/colors';
+@use '../../assets/scss/helper/layout';
+@use '../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
+
+.root {
+  .table {
+    tr {
+      th {
+        background: rgba(
+          $color: map-get(colors.$color-map, blue-100),
+          $alpha: 0.1
+        );
+        color: map-get(colors.$color-map, blue-100);
+        font-weight: 700;
+        font-size: 15px;
+        padding: 15px 8px;
+        width: 163px;
+        text-align: start;
+        vertical-align: top;
+
+        @include breakpointsMixin.media-breakpoint-up(md) {
+          font-size: 18px;
+          padding: 15px 24px;
+        }
+      }
+
+      td {
+        padding: 15px 24px;
+        input[type='text'],
+        input[type='email'] {
+          padding: 7px 21px;
+          width: -webkit-fill-available;
+          max-width: 447px;
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+        }
+        input::placeholder {
+          color: map-get(colors.$color-map, gray-400);
+        }
+
+        textarea {
+          width: -webkit-fill-available;
+          height: 430px;
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+          padding: 7px 21px;
+          resize: none;
+          font-size: 15px;
+        }
+
+        .filebox {
+          .upload-file {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            vertical-align: middle;
+            color: #999999;
+            border: 1px solid map-get(colors.$color-map, gray-150);
+            border-radius: 2px;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            img {
+              margin-right: 8.75px;
+            }
+          }
+
+          input[type='file'] {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+          }
+
+          .file-name-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: map-get(colors.$color-map, gray-100);
+            color: map-get(colors.$color-map, blue-100);
+            border-radius: 2px;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+
+            .file-name {
+              font-weight: bold;
+            }
+            .remove-file {
+              color: map-get(colors.$color-map, gray-700);
+              cursor: pointer;
+              padding: 5px;
+            }
+            .remove-file:hover {
+              color: map-get(colors.$color-map, gray-400);
+            }
+          }
+        }
+
+        .terms {
+          background: #fdfcfc;
+          color: map-get(colors.$color-map, gray-400);
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+          padding: 7px 21px;
+          line-height: 26px;
+
+          .title {
+            font-weight: 500;
+            color: map-get(colors.$color-map, gray-500);
+          }
+
+          p {
+            margin-bottom: 20px;
+            font-size: 14px;
+          }
+          p:nth-child(4) {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: spin 1.5s linear infinite;
+    background: conic-gradient(
+      from 46.16deg at 58.37% 50%,
+      rgba(166, 177, 188, 0) -19.34deg,
+      rgba(166, 177, 188, 0) 87.5deg,
+      #a6b1bc 273.75deg,
+      #a6b1bc 340.63deg,
+      rgba(166, 177, 188, 0) 340.66deg,
+      rgba(166, 177, 188, 0) 447.5deg
+    );
+  }
+
+  .spinner::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: map-get(colors.$color-map, blue-100);
+    border-radius: 100%;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

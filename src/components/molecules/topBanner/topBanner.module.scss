@@ -1,0 +1,35 @@
+@use '../../../assets/scss/abstracts/variables/colors';
+@use '../../../assets/scss/abstracts/mixins/breakpoints';
+
+.root {
+  width: 100%;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    height: 400px;
+  }
+
+  & img {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .call-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: map-get(colors.$color-map, 'white');
+    height: 100%;
+
+    & img {
+      width: 30px;
+      margin-top: 4px;
+      margin-right: 12px;
+
+      @include breakpoints.media-breakpoint-up(md) {
+        width: 40px;
+        margin-right: 16px;
+      }
+    }
+  }
+}

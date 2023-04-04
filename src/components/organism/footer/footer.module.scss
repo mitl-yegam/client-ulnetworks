@@ -1,0 +1,34 @@
+@use '../../../assets/scss/abstracts/variables/colors';
+@use '../../../assets/scss/abstracts/variables/flex';
+@use '../../../assets/scss/abstracts/variables/breakpoints';
+@use '../../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
+.root {
+  background-color: map-get(colors.$color-map, gray-900);
+  color: map-get(colors.$color-map, 'white');
+}
+
+.ul-wrapper {
+  display: none;
+
+  @include breakpointsMixin.media-breakpoint-up(md) {
+    & {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.logo-wrapper {
+  display: none;
+
+  @include breakpointsMixin.media-breakpoint-up(md) {
+    & {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}

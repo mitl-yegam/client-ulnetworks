@@ -1,0 +1,13 @@
+@use "../variables/_breakpoints";
+
+@mixin media-breakpoint-up($min) {
+  $hasName: map-has-key(breakpoints.$breakpoints, $min);
+
+  @if $hasName {
+    @media (min-width: map-get(breakpoints.$breakpoints, $min)) {
+      @content;
+    }
+  } @else {
+    @warn "#{$min}은 $breakpoints에 없는 이름입니다.";
+  }
+}

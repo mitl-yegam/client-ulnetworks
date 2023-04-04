@@ -1,0 +1,20 @@
+$text-align-map: (
+  left,
+  right,
+  center,
+);
+
+$text-weight: (
+  normal: 400,
+  bold: 500,
+  bolder: 700,
+);
+
+$white-space: (
+  normal,
+  nowrap,
+  pre,
+  pre-wrap,
+  pre-line,
+  break-spaces
+);

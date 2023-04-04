@@ -1,0 +1,14 @@
+@use '../abstracts/variables/colors';
+
+:root {
+  --gutter-x: 12px;
+  --gutter-y: 12px;
+}
+
+body {
+  color: map-get(colors.$color-map, gray-700);
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  word-break: keep-all;
+}

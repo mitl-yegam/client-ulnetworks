@@ -1,0 +1,63 @@
+@use '../../abstracts/variables/spacing';
+
+@for $i from 0 through spacing.$spacing {
+  .m-#{$i} {
+    margin: spacing.$base-size * $i !important;
+  }
+
+  .mt-#{$i} {
+    margin-top: spacing.$base-size * $i !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: spacing.$base-size * $i !important;
+  }
+
+  .ml-#{$i} {
+    margin-left: spacing.$base-size * $i !important;
+  }
+
+  .mr-#{$i} {
+    margin-right: spacing.$base-size * $i !important;
+  }
+
+  .mx-#{$i} {
+    margin-left: spacing.$base-size * $i !important;
+    margin-right: spacing.$base-size * $i !important;
+  }
+
+  .my-#{$i} {
+    margin-top: spacing.$base-size * $i !important;
+    margin-bottom: spacing.$base-size * $i !important;
+  }
+
+  .p-#{$i} {
+    padding: spacing.$base-size * $i !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: spacing.$base-size * $i !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: spacing.$base-size * $i !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: spacing.$base-size * $i !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: spacing.$base-size * $i !important;
+  }
+
+  .px-#{$i} {
+    padding-left: spacing.$base-size * $i !important;
+    padding-right: spacing.$base-size * $i !important;
+  }
+
+  .py-#{$i} {
+    padding-top: spacing.$base-size * $i !important;
+    padding-bottom: spacing.$base-size * $i !important;
+  }
+}

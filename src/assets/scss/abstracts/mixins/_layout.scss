@@ -1,0 +1,41 @@
+@use "../variables/layout" as *;
+@use "sass:math";
+
+/* Container */
+@mixin make-container($name) {
+  $width: map-get($container-widths, $name) or 100%;
+  $paddingX: map-get($container-paddings, $name) or 0;
+  $paddingY: map-get($container-paddings, $name) or 0;
+
+  width: $width !important;
+  padding: $paddingX $paddingY !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Column */
+@mixin make-col($pre-fix: '') {
+  @for $i from 1 through $grid-columns {
+    .#{$pre-fix}-#{$i} {
+      width: math.div(100, $grid-columns) * $i * 1% !important;
+    }
+  }
+}
+
+/* Gutters */
+@mixin make-gutter($axis: '') {
+  @if $axis == '' {
+    @for $i from 0 through $max-gutters {
+      &.g-#{$i} {
+        --gutter-x: calc(#{$i} * 1rem) !important;
+        --gutter-y: calc(#{$i} * 1rem) !important;
+      }
+    }
+  } @else {
+    @for $i from 0 through 5 {
+        &.g#{$axis}-#{$i} {
+          --gutter-#{$axis}: calc(#{$i} * 1rem) !important;
+        }
+      }
+  }
+}
