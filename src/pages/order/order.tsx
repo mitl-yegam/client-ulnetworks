@@ -95,9 +95,10 @@ const Order = () => {
       const formData = new FormData();
       formData.append('companyName', form.companyName);
       formData.append('name', form.name);
-      formData.append('phone', form.phone);
+      formData.append('phone', form.phone.replace(/-/g, ''));
       formData.append('email', form.email);
       formData.append('requirement', form.requirement);
+      formData.append('service', 'ulnetworks');
 
       if (form.fileList?.length) {
         for (let i = 0; i < form.fileList.length; i++) {
