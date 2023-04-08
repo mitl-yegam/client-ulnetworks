@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 sync ./build s3://yegam-client --profile yegam"
+    "deploy": "npm run build && aws s3 sync ./build s3://ulnetworks-client --profile yegam"
   },
   "eslintConfig": {
     "extends": [

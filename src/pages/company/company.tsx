@@ -27,10 +27,12 @@ const Company = () => {
     const data = {
       pageName: 'introduction',
       pageDetailName: 'sharing',
+      service: 'ulnetworks'
     };
     const clientData = {
       pageName: 'introduction',
       pageDetailName: 'client',
+      service: 'ulnetworks'
     };
     API.get({ url: '/media', data }).then(({ data }) => {
       setSharingList(data);
@@ -43,7 +45,7 @@ const Company = () => {
   return (
     <>
       <section className='container py-0'>
-        <TopTitle title='(주) 예감' borderBlue={false} />
+        <TopTitle title='(주) 유엘네트웍스' borderBlue={false} />
       </section>
       <TopBlueBanner>
         <div className='container white text-center'>
@@ -65,7 +67,7 @@ const Company = () => {
             <img src={LogoKica} width='100%' />
           </div>
           <p className='bold3 text-center mt-12'>
-            예감은 정보통신공사협회에 등록된 <br className='d-md-none' />{' '}
+            유엘네트웍스는 정보통신공사협회에 등록된 <br className='d-md-none' />{' '}
             정보통신공사 면허를 가진
             <br className='d-md-none' /> 전문 기업입니다.
             <br />
@@ -120,7 +122,7 @@ const Company = () => {
                     styles['logo-wrapper'],
                     'col-6 col-sm-4 col-md-2',
                   )}>
-                  <img src={clientImg[item.imgId]} alt={item.alt} />
+                  <img src={item.url} alt={item.alt} />
                 </div>
               );
             })}
@@ -131,7 +133,7 @@ const Company = () => {
         <div className='container d-center flex-column'>
           <h2 className='blue-100 mt-3 mb-12'>따뜻한 나눔</h2>
           <p className='bold3 text-center'>
-            예감과 함께 하신다면, <br />
+            유엘네트웍스와 함께 하신다면, <br />
             사랑이 필요한 이웃에게 따뜻한 손을 내밀어 주시고 계신 것입니다.
           </p>
         </div>

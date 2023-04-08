@@ -5,4 +5,6 @@ export type Form = {
   email: string;
   requirement: string;
   fileList: FileList | null | File[];
+
+  service: 'yegam' | 'ulnetworks';
 };

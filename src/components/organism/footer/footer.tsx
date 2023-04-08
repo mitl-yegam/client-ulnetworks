@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={clsx('container', 'py-md-15')}>
         <div className='row'>
           <div className='col col-md-8 col-lg-9'>
-            <strong className='heading6'>(주) 예감</strong>
+            <strong className='heading6'>(주) 유엘네트웍스</strong>
             <p className='my-4'>
               <span className='mr-4'>
                 대표자명: {companyInfo.representative}
@@ -23,6 +23,15 @@ const Footer = () => {
                   className='white'
                   href={`tel:${companyInfo.phone.replace(/[^\d]/g, '')}`}>
                   {companyInfo.phone}
+                </a>
+              </span>
+              <span className='d-none mx-4 d-md-inline'>|</span>
+              <span>
+                팩스:{' '}
+                <a
+                    className='white'
+                    href={`tel:${companyInfo.phone.replace(/[^\d]/g, '')}`}>
+                  {`02) 396 - 0400`}
                 </a>
               </span>
               <br className='d-md-none' />
@@ -45,7 +54,7 @@ const Footer = () => {
                 {companyInfo.officeHours}
               </strong>
             </p>
-            <p className='mt-10'>Copyright ⓒ 주식회사 예감</p>
+            <p className='mt-10'>Copyright ⓒ 주식회사 유엘네트웍스</p>
           </div>
           <div className={clsx(styles['ul-wrapper'], 'col-md-4', 'col-lg-3')}>
             <ul className='mr-20'>
@@ -64,7 +73,7 @@ const Footer = () => {
             </ul>
             <ul>
               <li>
-                <Link to={'/company-yegam'}>회사소개</Link>
+                <Link to={'/company'}>회사소개</Link>
               </li>
               <li>
                 <Link to={'/qna'}>Q&A</Link>
@@ -76,10 +85,10 @@ const Footer = () => {
           <div className='col col-md-8 col-lg-9'></div>
           <div className={clsx(styles['logo-wrapper'], 'col-md-4', 'col-lg-3')}>
             <span className='mr-8'>
-              <img src={logoWoman} alt='여성 기업' />
+              {/*<img src={logoWoman} alt='여성 기업' />*/}
             </span>
             <span>
-              <img src={logoDisabled} alt='장애인 기업' />
+              {/*<img src={logoDisabled} alt='장애인 기업' />*/}
             </span>
           </div>
         </div>

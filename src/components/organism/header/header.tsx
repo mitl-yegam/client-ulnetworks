@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { navPath } from '../layout/data';
 import styles from './header.module.scss';
-import Logo from 'assets/images/logo/logo-yegam.png';
+import Logo from 'assets/images/logo/logo-ulnetworks.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -29,7 +29,8 @@ const Header = () => {
         )}>
         <nav className='row align-items-center justify-between gy-0 flex-column flex-md-row'>
           <Link className={styles['logo-link']} to={'/'}>
-            <img className='mr-md-25' src={Logo} alt='yegam' />
+            {/*TODO: 로고 바꿔야 함*/}
+            <img className='mr-md-25' src={Logo} alt='ulnetworks' />
           </Link>
           <div className={clsx(styles['hamburger-menu-wrapper'], 'd-md-none')}>
             <input type='checkbox' onClick={handleOnClick} checked={toggle} />

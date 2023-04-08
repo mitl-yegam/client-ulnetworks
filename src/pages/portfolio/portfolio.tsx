@@ -18,6 +18,7 @@ const Portfolio = () => {
     const data = {
       pageName: 'home',
       pageDetailName: 'site',
+      service: 'ulnetworks'
     };
     API.get({ url: '/media', data }).then(({ data }) => {
       // 받아온 전체 배열을 페이징 처리

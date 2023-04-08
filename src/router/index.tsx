@@ -41,7 +41,7 @@ const Routes = () => {
         {/* 기업용 인터넷 가입 */}
         <Route path='/subscription-security' element={<Security />} />{' '}
         {/* 전용회선 */}
-        <Route path='/company-yegam' element={<Company />} /> {/* 회사소개 */}
+        <Route path='/company' element={<Company />} /> {/* 회사소개 */}
         <Route path='/qna' element={<QnA />} /> {/* 자주하는질문 */}
         <Route path='/order' element={<Order />} /> {/* 견적문의 */}
         <Route path='/portfolio' element={<Portfolio />} /> {/* 설치사례 */}

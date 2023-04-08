@@ -25,7 +25,7 @@ export const path = [
   },
   {
     name: "회사소개",
-    path: "/company-yegam"
+    path: "/company"
   },
   {
     name: "자주하는질문",
@@ -64,7 +64,7 @@ export const navPath = [
   },
   {
     name: "회사소개",
-    path: "/company-yegam"
+    path: "/company"
   },
   {
     name: "Q&A",

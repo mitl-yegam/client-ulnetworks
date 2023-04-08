@@ -34,6 +34,7 @@ const Main = () => {
     phone: '',
     email: '',
     requirement: '',
+    service: 'ulnetworks',
   }); // 빠른견적 문의 Form
   const [siteList, setSiteList] = useState<{ [key: string]: any }[]>([]);
 
@@ -88,6 +89,7 @@ const Main = () => {
           phone: '',
           email: '',
           requirement: '',
+          service: 'ulnetworks'
         });
         setTermsAgree(false);
         handleModal();
@@ -110,6 +112,7 @@ const Main = () => {
     const data = {
       pageName: 'home',
       pageDetailName: 'site',
+      service: 'ulnetworks'
     };
     API.get({ url: '/media', data }).then(({ data }) => {
       setSiteList(data);
@@ -173,111 +176,21 @@ const Main = () => {
                 </a>
               </h2>
             </div>
-            <Link to={'/order'}>
-              <div className={clsx(styles['quote-contact'], 'bg-blue-100')}>
-                <h3>견적문의</h3>
-                <div className='d-flex justify-end'>
-                  <img src={arrowLeft} alt='견적문의' />
-                </div>
-              </div>
-            </Link>
           </div>
           <div className='col col-md-6'>
-            <div className={clsx(styles['fast-quote-contact'])}>
-              <div className='mb-2'>
-                <h3>빠른견적문의</h3>
-                <p className='heading6 text-normal'>
-                  확인 후 순차적으로 연락드립니다.
-                </p>
-              </div>
-              <div className={clsx(styles['terms-wrapper'])}>
-                <p className='mr-6'>개인정보수집 이용에 관한 동의</p>
-                <div className='d-flex'>
-                  <label className='mr-2'>
-                    <input
-                      type='radio'
-                      name='terms'
-                      onChange={() => handleTermsAgree(true)}
-                      checked={termsAgree}
-                    />
-                    <span className='ml-md-3'>동의함</span>
-                  </label>
-                  <label>
-                    <input
-                      type='radio'
-                      name='terms'
-                      onChange={() => handleTermsAgree(false)}
-                      checked={!termsAgree}
-                    />
-                    <span className='ml-md-3'>동의안함</span>
-                  </label>
-                  <span
-                    className={styles['detail-view']}
-                    onClick={() => handleTermsModal()}>
-                    [자세히 보기]
-                  </span>
+              <Link to={'/order'}>
+                <div className={clsx(styles['quote-contact'], 'bg-blue-100')}>
+                  <h3>견적문의</h3>
+                  <div className='d-flex justify-end'>
+                    <img src={arrowLeft} alt='견적문의' />
+                  </div>
                 </div>
-              </div>
-              <div className={styles['divider']} />
-              <form className={styles['form']} onSubmit={onSubmit}>
-                <label className='heading6'>
-                  <span>고객명</span>
-                  <input
-                    type='text'
-                    className='heading6'
-                    id='name'
-                    value={fastQuoteForm.name}
-                    placeholder='이름을 입력해주세요'
-                    onChange={handleChange}
-                    required
-                  />
-                </label>
-                <label className='heading6'>
-                  <span>연락처</span>
-                  <input
-                    type='text'
-                    className='heading6'
-                    id='phone'
-                    value={fastQuoteForm.phone}
-                    placeholder='전화번호를 입력해주세요'
-                    onChange={handleChange}
-                    required
-                  />
-                </label>
-                <label className='heading6'>
-                  <span>이메일</span>
-                  <input
-                    type='email'
-                    className='heading6'
-                    id='email'
-                    value={fastQuoteForm.email}
-                    placeholder='이메일을 입력해주세요'
-                    onChange={handleChange}
-                    required
-                  />
-                </label>
-                <label className='heading6'>
-                  <span>요청사항</span>
-                  <input
-                    type='text'
-                    className='heading6'
-                    id='requirement'
-                    value={fastQuoteForm.requirement}
-                    placeholder='요청사항을 입력해주세요'
-                    onChange={handleChange}
-                    required
-                  />
-                </label>
-                <div className='d-center'>
-                  <Button text={'상담신청'} />
-                </div>
-              </form>
+              </Link>
             </div>
-          </div>
         </div>
         <div className='row d-center mb-8 mb-md-15'>
           <h2 className='blue-100 text-center'>
-            왜 예감의 고객만족도는 <br className='d-md-none' />
+            왜 유엘네트웍스의 고객만족도는 <br className='d-md-none' />
             <span className={styles['dot-position']}>
               최<span className={styles['dot']}>.</span>
             </span>
@@ -301,7 +214,7 @@ const Main = () => {
                 면허 취득사
               </h3>
               <p className=''>
-                (주) 예감은 정보통신공사협회에 공식 등록된
+                (주) 유엘네트웍스는 정보통신공사협회에 공식 등록된
                 <br /> 정보통신공사 면허를 가진 ‘전문 기업’으로 <br />
                 <span className='text-bolder'>
                   전문성과 노하우를 기반하여 책임
@@ -323,7 +236,7 @@ const Main = () => {
               <p className=''>
                 안전한 인터넷 환경 구성의 시작은 ‘자재’입니다.
                 <br />
-                양심기업 (주)예감은 <br />
+                양심기업 (주)유엘네트웍스는 <br />
                 오직{' '}
                 <span className='text-bolder'>
                   국산용 고강도 정품 자재
@@ -341,7 +254,7 @@ const Main = () => {
                 빠르고 친절한 <br /> 서비스
               </h3>
               <p className=''>
-                (주)예감은 고객님들의 소중한 시간을 위해
+                (주)유엘네트웍스는 고객님들의 소중한 시간을 위해
                 <br /> 최선을 다하여 <br />
                 <span className='text-bolder'>빠르고 친절한 서비스</span>로
                 보답합니다.

@@ -19,6 +19,7 @@ const Order = () => {
     email: '',
     requirement: orderRequirement,
     fileList: null,
+    service: "ulnetworks"
   });
 
   // 파일 업로드
@@ -123,6 +124,7 @@ const Order = () => {
             email: '',
             requirement: orderRequirement,
             fileList: null,
+            service: 'ulnetworks'
           });
           setTermsAgree(false);
         })

@@ -1,19 +1,19 @@
 {
-  "short_name": "예감",
-  "name": "Yegam",
+  "short_name": "유엘네트웍스",
+  "name": "Ulnetworks",
   "icons": [
     {
-      "src": "favicon-16x16.png",
+      "src": "ulnetworks-favicon.png",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "src": "favicon-32x32.png",
+      "src": "ulnetworks-favicon.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "favicon-96x96.png",
+      "src": "ulnetworks-favicon.png",
       "type": "image/png",
       "sizes": "96x96"
     }

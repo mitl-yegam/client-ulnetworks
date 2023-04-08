@@ -14,7 +14,7 @@ const TopBanner = () => {
         <div className='row bold1 white mb-5 mb-md-11'>
           <p className='bold1 text-center'>
             전문적인 기술과 노하우로 <br className='d-md-none' /> 책임 시공하는{' '}
-            <span className='text-bolder'>(주)예감</span>
+            <span className='text-bolder'>(주)유엘네트웍스</span>
           </p>
         </div>
         <ShadowBox>
